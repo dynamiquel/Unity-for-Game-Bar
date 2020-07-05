@@ -1,0 +1,121 @@
+﻿<Window x:Class="UnityUWPConfigurator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UnityUWPConfigurator"
+        mc:Ignorable="d"
+        Title="Unity for Xbox Game Bar Setup" Height="750" Width="350" MinHeight="250" MinWidth="300" ResizeMode="CanMinimize">
+    <Grid>
+        <StackPanel Margin="8,4,8,4">
+            <TextBlock Text="Unity UWP Solution"  FontSize="16" FontWeight="SemiBold"/>
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,4,0,4">
+                <TextBox FontSize="14"
+                         HorizontalAlignment="Stretch"
+                         Width="250"
+                         Name="uwpSolutionLocationTextBox"
+                         TextWrapping="Wrap"/>
+                <Button Content="Browse..."
+                        HorizontalAlignment="Right"
+                        Click="browseUwpSolutionButton_Click"/>
+            </StackPanel>
+            <TextBlock Text="Preferences"
+                       FontSize="20" 
+                       FontWeight="SemiBold"
+                       Margin="0,16,0,4"/>
+            <TextBlock Text="All preferences can be configured later through manual means."
+                       TextWrapping="Wrap"
+                       Margin="0,0,0,12"/>
+            <TextBlock Text="Widget Display Name"
+                       FontSize="16" 
+                       FontWeight="SemiBold"
+                       ToolTip="The name displayed in the Xbox Game Bar. This does not affect the name displayed elsewhere."
+                       Margin="4,0,0,4"/>
+            <TextBox Margin="4,0,0,4" 
+                     FontSize="14"
+                     Name="gameDisplayNameTextBox"
+                     Text="Untitled Video Game"/>
+            <TextBlock Text="Widget Description"
+                       FontSize="16" 
+                       FontWeight="SemiBold"
+                       Margin="4,4,0,4"
+                       ToolTip="The description displayed in the Xbox Game Bar."/>
+            <TextBox Margin="4,0,0,4" 
+                     FontSize="14"
+                     Name="descriptionTextBox"
+                     MinLines="2"
+                     MaxLines="4"
+                     AcceptsReturn="True"
+                     Text="Powered by Unity"
+                     TextWrapping="Wrap"/>
+            <CheckBox Margin="4,8,0,4"
+                      Content="Only run in Game Bar"
+                      FontWeight="SemiBold"
+                      ToolTip="When enabled, the game can only be run from within the Xbox Game Bar. When disabled, the game can be run from within the Xbox Game Bar as well as the traditional way."/>
+            <TextBlock Text="Size"
+                       FontSize="16" 
+                       FontWeight="SemiBold"
+                       Margin="4,12,0,4"/>
+            <TextBlock Text="Widget Initial Width"
+                       FontSize="14" 
+                       FontWeight="SemiBold"
+                       Margin="8,4,0,4"
+                       ToolTip="The width that the widget will start at."/>
+            <TextBox Margin="8,0,0,4" 
+                     FontSize="14"
+                     Name="widthTextBox"
+                     Text="1280"
+                     PreviewTextInput="numberTextBox_PreviewInput"/>
+            <TextBlock Text="Widget Initial Height"
+                       FontSize="14" 
+                       FontWeight="SemiBold"
+                       Margin="8,4,0,4"
+                       ToolTip="The height that the widget will start at."/>
+            <TextBox Margin="8,0,0,4" 
+                     FontSize="14"
+                     Name="heightTextBox"
+                     Text="720"
+                     PreviewTextInput="numberTextBox_PreviewInput"/>
+            <CheckBox Margin="8,8,0,4"
+                      Content="Allow widget to be resized"
+                      FontWeight="SemiBold"
+                      IsChecked="True"
+                      Name="resizableCheckBox"/>
+            <TextBlock Text="Widget Minimum Width"
+                       FontSize="14" 
+                       FontWeight="SemiBold"
+                       Margin="8,4,0,4"
+                       ToolTip="The smallest width that the widget can go."/>
+            <TextBox Margin="8,0,0,4" 
+                     FontSize="14"
+                     Name="minWidthTextBox"
+                     Text="1280"
+                     PreviewTextInput="numberTextBox_PreviewInput"/>
+            <TextBlock Text="Widget Minimum Height"
+                       FontSize="14" 
+                       FontWeight="SemiBold"
+                       Margin="8,4,0,4"
+                       ToolTip="The smallest height that the widget can go."/>
+            <TextBox Margin="8,0,0,4" 
+                     FontSize="14"
+                     Name="minHeightTextBox"
+                     Text="720"
+                     PreviewTextInput="numberTextBox_PreviewInput"/>
+            <Button Margin="0,20,0,4"
+                    Content="Convert Project" 
+                    FontSize="16"
+                    Padding="8,8,8,8"
+                    Name="convertButton"
+                    FontWeight="SemiBold"
+                    Click="convertButton_Click"/>
+            <TextBlock HorizontalAlignment="Center"
+                       FontSize="14"
+                       Margin="0,8,0,0">
+                <Hyperlink NavigateUri="https://github.com/dynamiquel/Unity-for-Game-Bar" RequestNavigate="Hyperlink_RequestNavigate">
+                    GitHub
+                </Hyperlink>
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>
