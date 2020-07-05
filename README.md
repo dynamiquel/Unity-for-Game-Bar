@@ -18,7 +18,7 @@ It was designed for mobile-like games to be played whiles also playing another g
 5. You can know more about building Unity games for UWP here: https://unity3d.com/partners/microsoft/porting-guides
 
 ### For everyone
-6. Open the app, and for **Unity UWP Solution**, enter the file path for the solution (.sln) file that Unity created for the UWP project.
+6. Open the [app](https://github.com/dynamiquel/Unity-for-Game-Bar/releases), and for **Unity UWP Solution**, enter the file path for the solution (.sln) file that Unity created for the UWP project.
 7. All other options are for preference. When you are ready, click **Convert Project**.
 8. Once the project has been converted, open the solution (.sln) file with **Visual Studio 2019**.
 9. Install the **Microsoft.Gaming.XboxGameBar** NuGet package, by going to **Project | Manage NuGet Packages | Browse**, search for 'Microsoft.Gaming.XboxGameBar' and click **Install**. *I wasn't sure how to automatically install the package*.
