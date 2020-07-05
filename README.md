@@ -28,4 +28,5 @@ It was designed for mobile-like games to be played whiles also playing another g
 ## Things you should know
 1. The game must work with the Universal Windows Platform to be used in the Xbox Game Bar.
 2. Not tested, but it is likely that running the game in the Xbox Game Bar will yield lower frame rates than running normally.
-3. Other than that, there are zero known limitations of running your game through the Xbox Game Bar.
+3. Only one instance of the game can exist at any given time. If you attempt to load the game through the Xbox Game Bar as well as traditonally, the game will crash.
+4. Other than that, there are zero known limitations of running your game through the Xbox Game Bar.
